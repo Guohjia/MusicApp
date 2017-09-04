@@ -59,9 +59,7 @@
             }
             if($matchLyric){
                 let top=$matchLyric.offset().top
-                console.log(top)
                 let lineTop=$('.lyric').offset().top
-                console.log(lineTop)
                 let delta=top - lineTop -$('.lyric-wrapper').height()/3
                 $('.lyric').css('transform',`translateY(-${delta}px)`)
                 $matchLyric.addClass('active').prev().removeClass()
