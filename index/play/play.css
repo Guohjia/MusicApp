@@ -102,6 +102,10 @@
     line-height: 30px;
 }
 
+.lyric{
+    transition: all .3s linear;
+}
+
 .lyric p.active{
     color: #fff;
 }
