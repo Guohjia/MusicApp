@@ -4,7 +4,7 @@
 .play-page{
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
     background:transparent url(https://p3.music.126.net/VA3lemxyYS6UGCuuZnZD6g==/634418209274023.jpg)  center ;
     background-size: cover; 
     position: relative;
@@ -95,7 +95,7 @@
 .corver-wrapper{
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 51%;
     transform: translate(-50%,-50%)
 }
 
