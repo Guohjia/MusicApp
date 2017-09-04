@@ -23,6 +23,7 @@
     justify-content: center;
     align-items: center;
     margin-top:10vh;
+    position: relative;
 }
 .disc .svg-wrapper{
     border:1px solid #fff;
@@ -34,7 +35,10 @@
     height: 15vw;
     z-index: 999;
     border-radius: 50%;
-    background: rgba(0, 0, 0, .5)
+    background: rgba(0, 0, 0, .5);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
 }
 .disc .icon{
     fill: white;
@@ -56,16 +60,17 @@
     position: absolute;
     left:45%;
     top:0;
+    z-index: 9999;
 }
 .play-page .disc-circle{
     width:79vw;
 }
 .play-page .disc-light{
-    position: absolute;
     width:79vw;
     border-radius: 50%;
     animation: rotation 20s infinite linear;  
-    animation-play-state: paused; 
+    animation-play-state: paused;
+    
 }
 .disc.playing .disc-light,
 .disc.playing .disc-cover
@@ -74,12 +79,26 @@
 }
 
 .play-page .disc-cover{
-    position: absolute;
     width:49vw;
     border-radius: 50%;
     animation: rotation 20s infinite linear;
-    animation-play-state: paused; 
+    animation-play-state: paused;
 }
+
+.light-wrapper{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.corver-wrapper{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%)
+}
+
 .lyric-description{
     z-index: 999;
     color:#AEABAC;
