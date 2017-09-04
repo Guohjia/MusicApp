@@ -58,31 +58,31 @@
 .play-page .disc-pointer{
     width:25vw;
     position: absolute;
-    left:45%;
+    left:47%;
     top:0;
     z-index: 9999;
 }
 .play-page .disc-circle{
     width:79vw;
 }
-.play-page .disc-light{
+.disc>.light-wrapper>.disc-light{
     width:79vw;
     border-radius: 50%;
     animation: rotation 20s infinite linear;  
     animation-play-state: paused;
-    
-}
-.disc.playing .disc-light,
-.disc.playing .disc-cover
-{
-    animation-play-state: running;
 }
 
-.play-page .disc-cover{
+.disc>.corver-wrapper>.disc-cover{
     width:49vw;
     border-radius: 50%;
     animation: rotation 20s infinite linear;
     animation-play-state: paused;
+}
+
+.disc.playing .disc-light,
+.disc.playing .disc-cover
+{
+    animation-play-state: running;
 }
 
 .light-wrapper{
