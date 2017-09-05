@@ -2,12 +2,17 @@
     let id=location.search.match(/\bid=([^&]*)/)[1]
     $.get('../song.json').then(function(response){
         song=response.filter(i=>i.id==id)
-        let {url,lyric,name}=song[0]
+        let {url,lyric,name,coverimg,bgimg}=song[0]
         $(".lyric-description>h2").text(name)
         getlyric(lyric)
         playMusic(url)
+        getImage(coverimg,bgimg)
     })
 
+    function getImage(coverimg,bgimg){
+        $('.disc-cover').attr('src',coverimg)
+        $('.play-page').css('background',`url(${bgimg}) center /cover transparent`)
+    }
 
     function getlyric(lyric){
         let array = lyric.split('\n')
