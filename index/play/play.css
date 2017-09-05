@@ -88,10 +88,6 @@
     border-radius: 50%;
     animation: rotation 20s infinite linear;
     animation-play-state: paused;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
     /* -webkit-animation: rotation 20s infinite linear;
     -moz-animation: rotation 20s infinite linear;
     -webkit-animation-play-state: paused;

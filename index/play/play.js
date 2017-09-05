@@ -42,12 +42,12 @@
             $('.disc').addClass('playing')
             $('.disc-pointer').addClass('active')
         }
-        $('.icon-play').on('click',function(){
+        $('.icon-play').on('touchstart',function(){
             audio.play()
             $('.disc').addClass('playing')
             $('.disc-pointer').addClass('active')
         })
-        $('.icon-pause').on('click',function(){
+        $('.icon-pause').on('touchstart',function(){
             audio.pause()
             $('.disc').removeClass('playing')
             $('.disc-pointer').removeClass('active')
