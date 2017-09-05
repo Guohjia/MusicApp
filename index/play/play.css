@@ -82,7 +82,7 @@
     -moz-animation-play-state: paused;
 }
 
-.disc>.corver-wrapper>.disc-cover{
+.disc .disc-cover{
     width:49vw;
     border-radius: 50%;
     -webkit-animation: rotation 20s infinite linear;
