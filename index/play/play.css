@@ -96,6 +96,7 @@
 {
     -webkit-animation-play-state: running;
     -moz-animation-play-state: running;
+    border:1px solid red;
 }
 
 .light-wrapper{
@@ -163,6 +164,10 @@
 .open-download a.main{
     background: #D43B32;
     color:#fff;
+}
+
+.icon-play{
+    background: transparent;
 }
 @keyframes rotation{
     0%{
