@@ -77,27 +77,29 @@
     width:79vw;
     border-radius: 50%;
     animation-play-state: paused;
-    -webkit-animation: rotation 20s infinite linear;
+    /* -webkit-animation: rotation 20s infinite linear;
     -moz-animation: rotation 20s infinite linear;
     -webkit-animation-play-state: paused;
-    -moz-animation-play-state: paused;
+    -moz-animation-play-state: paused; */
 }
 
 .disc .disc-cover{
     width:49vw;
     border-radius: 50%;
+    animation: rotation 20s infinite linear;
     animation-play-state: paused;
-    -webkit-animation: rotation 20s infinite linear;
+    /* -webkit-animation: rotation 20s infinite linear;
     -moz-animation: rotation 20s infinite linear;
     -webkit-animation-play-state: paused;
-    -moz-animation-play-state: paused;
+    -moz-animation-play-state: paused; */
 }
 
 .disc.playing .disc-light,
 .disc.playing .disc-cover
 {
-    -webkit-animation-play-state: running;
-    -moz-animation-play-state: running;
+    animation-play-state: running
+    /* -webkit-animation-play-state: running;
+    -moz-animation-play-state: running; */
 }
 
 .light-wrapper{
