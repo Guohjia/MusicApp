@@ -103,12 +103,6 @@ section>h2:first-child{
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    /* position: relative;
-    line-height: 1.4em;
-    height: 2.8em;
-    overflow: hidden; */
-    /* border:  1px solid red; */
-    /* width:80px; */
 }
 .latestMusic>ul{
     margin-left: calc(2.6vw + 2px);

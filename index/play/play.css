@@ -76,10 +76,11 @@
 .disc>.light-wrapper>.disc-light{
     width:79vw;
     border-radius: 50%;
-    animation-play-state: paused;
-    -webkit-animation: none !important;
+    animation: rotation 20s infinite linear;
+    /* -webkit-animation: none; */
     -webkit-animation: rotation 20s infinite linear;
     -moz-animation: rotation 20s infinite linear;
+    animation-play-state: paused;
     -webkit-animation-play-state: paused;
     -moz-animation-play-state: paused;
 }
@@ -88,10 +89,10 @@
     width:49vw;
     border-radius: 50%;
     animation: rotation 20s infinite linear;
-    animation-play-state: paused;
-    /* -webkit-animation: none !important; */
     -webkit-animation: rotation 20s infinite linear;
     -moz-animation: rotation 20s infinite linear;
+    /* -webkit-animation: none; */
+    animation-play-state: paused;
     -webkit-animation-play-state: paused;
     -moz-animation-play-state: paused;
 }
