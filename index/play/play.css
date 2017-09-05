@@ -57,7 +57,8 @@
 
 .play-page .disc-pointer{
     transform: rotate(-20deg);
-    transform-origin: 15px 0;
+    transition: all .3s linear;
+    transform-origin: 8px 0;
     width:25vw;
     position: absolute;
     left:47%;
