@@ -40,14 +40,17 @@
         audio.oncanplay=function(){
             audio.play()
             $('.disc').addClass('playing')
+            $('.disc-pointer').addClass('active')
         }
         $('.icon-play').on('click',function(){
             audio.play()
             $('.disc').addClass('playing')
+            $('.disc-pointer').addClass('active')
         })
         $('.icon-pause').on('click',function(){
             audio.pause()
             $('.disc').removeClass('playing')
+            $('.disc-pointer').removeClass('active')
         })
         setInterval(function(){
             let seconds=audio.currentTime
