@@ -87,8 +87,8 @@
     border-radius: 50%;
     -webkit-animation: rotation 20s infinite linear;
     -moz-animation: rotation 20s infinite linear;
-    -webkit-animation-play-state: paused;
-    -moz-animation-play-state: paused;
+    /* -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused; */
 }
 
 .disc.playing .disc-light,
@@ -96,7 +96,6 @@
 {
     -webkit-animation-play-state: running;
     -moz-animation-play-state: running;
-    border:1px solid red;
 }
 
 .light-wrapper{
@@ -166,9 +165,6 @@
     color:#fff;
 }
 
-.icon-play{
-    background: transparent;
-}
 @keyframes rotation{
     0%{
         transform: rotate(0deg)
