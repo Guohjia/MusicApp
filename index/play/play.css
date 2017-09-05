@@ -87,12 +87,13 @@
     border-radius: 50%;
     -webkit-animation: rotation 20s infinite linear;
     -moz-animation: rotation 20s infinite linear;
-    /* -webkit-animation-play-state: paused;
-    -moz-animation-play-state: paused; */
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    border:1px solid blue;
 }
 
-.disc.playing .disc-light,
-.disc.playing .disc-cover
+.playing .disc-light,
+.playing .disc-cover
 {
     -webkit-animation-play-state: running;
     -moz-animation-play-state: running;
