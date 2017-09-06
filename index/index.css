@@ -60,6 +60,31 @@ header{
     border-top:2px solid #D33A31;
     left:-2vw;right: -2vw;
 }
+.content>li{
+    display: none;
+}
+.content>li:first-child{
+    margin-top: 31vw;
+}
+
+.content>li:nth-child(2){
+    margin-top: 27vw;
+}
+
+.content>li:nth-child(3){
+    margin-top: 29vw;
+}
+
+.content>li.active{
+    display: block;
+}
+
+.content>li>.contentLoading{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%)
+}
 
 section>h2:first-child{
     color:rgba(0, 0, 0, .8);
@@ -72,7 +97,6 @@ section>h2:first-child{
 }
 .recommend {
     width: 100vw;
-    margin-top: 31vw;
 }
 .recommend ul{
     display: flex;
@@ -108,12 +132,12 @@ section>h2:first-child{
     margin-left: calc(2.6vw + 2px);
 }
 
-.latestMusic>ul>li{
+.latestMusic>ul>li,.songList>li{
     position: relative;
     border-bottom: 1px solid rgb(239, 239, 240);
     padding: 1.2vw 0;
 }
-.latestMusic>ul>li>h3{
+.latestMusic>ul>li>h3,.songList .song-content>h3{
     font-weight: normal;
     letter-spacing: .2vw;
     font-size: 4.5vw;
@@ -124,16 +148,16 @@ section>h2:first-child{
     white-space: nowrap;
     word-break: normal
 }
-.latestMusic>ul>li>p{
+.latestMusic>ul>li>p,.songList .song-content>p{
     font-size: 3.2vw;
     color:#888;
     display: flex;
     align-items: center;
 }
-.latestMusic>ul>li>p>.singer{
+.latestMusic>ul>li>p>.singer,.songList .song-content>p>.singer{
     margin-left: 1vw;
 }
-.latestMusic>ul>li>h3>span{
+.latestMusic>ul>li>h3>span,.songList .song-content>h3>span{
     color:#888;
 }
 .latestMusic>ul>li>a{
@@ -173,4 +197,59 @@ section.art .copyright{
     font-size: 3.2vw;
     line-height: 4.2vw;
     transform: scale(.75);
+}
+
+.hotSongList{
+    /* border:1px solid red; */
+}
+.hotSongList>.header-img{
+    padding:5.3vw 0 0 5.3vw;
+    height: 39vw;
+    background: url(http://s3.music.126.net/m/s/img/hot_music_bg_2x.jpg?f01a252389c26bcf016816242eaa6aee) no-repeat;
+    background-size: contain;
+}
+.hotSongList>.header-img>.hotsong{
+    width: 37.8vw;
+    height: 17.8vw;
+    background: url(http://s3.music.126.net/m/s/img/index_icon_2x.png?5207a28c3767992ca4bb6d4887c74880);
+    background-position: -6.3vw -8vw;
+    background-size: 44.26vw 25.86vw;
+}
+.hotSongList>.header-img>p{
+    margin-top:2.6vw;
+    font-size:3.2vw;
+    color:hsla(0,0%,100%,.8);
+}
+
+
+
+
+.songList>li{
+    display: flex;
+    align-items: center;
+    margin-top: 1vw;
+}
+.songList>li>.songindex{
+    padding:2vw;
+    font-size: 4.5vw;
+}
+.songList>li:nth-child(1)>.songindex,
+.songList>li:nth-child(2)>.songindex,
+.songList>li:nth-child(3)>.songindex{
+    color: #df3436
+}
+.songList>li>a{
+    font-size:4.5vw;
+    position: absolute;
+    right: 2vw;
+}
+
+
+.fulllist{
+    height: 55px;
+    line-height: 55px;
+    text-align: center
+}
+.fulllist>span{
+    color: #999;
 }

@@ -1,5 +1,5 @@
-(function(){
-    let id=location.search.match(/\bid=([^&]*)/)[1]
+$(function(){
+    let id=location.search.match(/\bid=([^&]*)/)[1]  //获取查询id
     $.get('../song.json').then(function(response){
         song=response.filter(i=>i.id==id)
         let {url,lyric,name,coverimg,bgimg}=song[0]
@@ -78,9 +78,5 @@
     function pad(number){
         return number>=10? number+ '':'0'+number
     }
-    // $.get('./lyric.json').then(function (object) {
-    //     let { lyric } = object
-        
-    // })
     
-})()
+})
