@@ -265,7 +265,6 @@ section.art .copyright{
     height: 8vw;
     padding: 0 8vw;
     background: #ebecec;
-    margin-bottom: 6vw;
 }
 .searchWrapper #search{
     height: 8vw;
@@ -300,6 +299,7 @@ section.art .copyright{
 }
 .hot-search{
     display: none;
+    margin-top: 6vw;
 }
 .hot-search.active{
     display: block;
@@ -324,4 +324,10 @@ section.art .copyright{
     font-size: 3.73vw;
     line-height: 8.53vw;
     color: #333
+}
+.output>h3{
+    margin-right: 2vw;
+    padding: 2vw 0 1.5vw 0;
+    border-bottom:1px solid #ebecec;
+    font-weight: normal;
 }

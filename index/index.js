@@ -83,7 +83,6 @@ $(function () {
 
     $('.hot-search>.list').on('click','li',function(){
         let id=$(this).attr('data-id')
-        console.log(typeof id)
         $('.hot-search').removeClass('active')
         $('.icon-back').addClass('active')
         sendRequest(+id) //string=>number
@@ -105,15 +104,16 @@ $(function () {
         timer = setTimeout(function () {
             search(value).then((result) => {
                 if (result.length !== 0) {
-                    $('.output').text(result.map(item => { return item.name }).join(','))
-                    $('.output').on('click', function () {
+                    $('.output').html(result.map(item => { return `<h3>${item.name }</he>`}))
+                    let h3Nodes=document.querySelectorAll('.output>h3')
+                    document.querySelector('.output').onclick=function(e){   //用原生js方法多次绑定事件
                         let $loading = `<img class="contentLoading" src="./images/loading.gif" alt="">`
                         $('.output').text('')
                         $('.searchSong').append($loading)
-                        let { id } = result[0]
-                        //开始发送请求
+                        let index=[].indexOf.call(h3Nodes,e.target)  //区分多个搜索结果
+                        let { id } = result[index]
                         sendRequest(id)
-                    })
+                    }
                 } else {
                     $('.output').text('没有结果')
                 }
@@ -127,57 +127,47 @@ $(function () {
             var database = [
                 {
                     "id": 1,
-                    "name": "Ready For It?",
-                    "singer": "Taylor Swift - Ready For It"
+                    "name": "Ready For It?"
                 },
                 {
                     "id": 2,
-                    "name": "我在夜里偷看过一颗星星",
-                    "singer": "齐秦 / 齐豫 - 我在夜里偷看过一颗星星"
+                    "name": "我在夜里偷看过一颗星星"
                 },
                 {
                     "id": 3,
-                    "name": "SHE",
-                    "singer": "大橋トリオ - SHE"
+                    "name": "SHE"
                 },
                 {
                     "id": 4,
-                    "name": "普通人",
-                    "singer": "成龙 / 刘涛 - 普通人"
+                    "name": "普通人"
                 },
                 {
                     "id": 5,
-                    "name": "Baby U Know",
-                    "singer": "OB03 - Baby U Know"
+                    "name": "Baby U Know"
                 },
                 {
                     "id": 6,
-                    "name": "英雄归来",
-                    "singer": "PG One - 英雄归来"
+                    "name": "英雄归来"
                 },
                 {
                     "id": 7,
-                    "name": "谁比我有范儿 (舒服版)",
-                    "singer": "VaVa - 谁比我有范儿 (舒服版)"
+                    "name": "谁比我有范儿 (舒服版)"
                 },
                 {
                     "id": 8,
-                    "name": "哭给你听",
-                    "singer": "金志文 - 哭给你听"
+                    "name": "哭给你听"
                 },
                 {
                     "id": 9,
-                    "name": "云长",
-                    "singer": "赵钶 - 云长"
+                    "name": "云长"
                 },
                 {
                     "id": 10,
-                    "name": "当冬夜渐暖",
-                    "singer": "孙燕姿 - 当冬夜渐暖"
+                    "name": "当冬夜渐暖"
                 }
             ]
             let result = database.filter(function (item) {
-                return item.name.indexOf(keyword) >= 0 || item.singer.indexOf(keyword) >= 0
+                return item.name.indexOf(keyword) >= 0 || item.name.indexOf(keyword.toUpperCase()) >= 0
             })
             setTimeout(function () {
                 console.log('搜到' + keyword + '的结果')
