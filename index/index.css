@@ -48,8 +48,8 @@ header{
     color:#D33A31;
 }
 .sitenav>ul>li>span{
-    height: 10vw;
-    line-height: 10vw;
+    height: 11vw;
+    line-height: 11vw;
     display: inline-block;
     position: relative;
 }
@@ -64,11 +64,11 @@ header{
     display: none;
 }
 .content>li:first-child{
-    margin-top: 31vw;
+    margin-top: 32vw;
 }
 
 .content>li:nth-child(2){
-    margin-top: 27vw;
+    margin-top: 28vw;
 }
 
 .content>li:nth-child(3){
@@ -246,10 +246,69 @@ section.art .copyright{
 
 
 .fulllist{
-    height: 55px;
-    line-height: 55px;
+    height: 14.67vw;
+    line-height: 14.67vw;
     text-align: center
 }
 .fulllist>span{
     color: #999;
+}
+.searchWrapper{
+    padding: 4vw 2.67vw;
+}
+.searchWrapper>.input-wrapper{
+    border-radius: 8vw;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 8vw;
+    padding: 0 8vw;
+    background: #ebecec;
+    margin-bottom: 6vw;
+}
+.searchWrapper #search{
+    height: 8vw;
+    line-height: 4.8vw;
+    background: transparent;
+    font-size: 3.73vw;
+    border: 0;
+    outline: 0;
+    flex-grow: 1;
+}
+.searchWrapper #search::placeholder{
+    color: #c9c9c9;
+}
+.input-wrapper span{
+    position: absolute;
+}
+.input-wrapper>.icon-search{
+    left: 0;
+    top:1.6vw;
+    padding-left: 2.67vw;
+}
+.input-wrapper>.icon-back{
+    right: 0;
+    padding-right: 2.67vw;
+}
+.hot-search>span{
+    font-size: 3.2vw;
+    line-height: 3.2vw;
+    color: #666
+}
+.hot-search>.list{
+    margin-top:2vw;
+}
+.hot-search>.list>li{
+    display: inline-block;
+    border:1px solid #ebecec;
+    border-radius: 8vw;
+    display: inline-block;
+    height: 8.53vw;
+    margin-right: 2.13vw;
+    margin-bottom: 2.13vw;
+    padding: 0 3.73vw;
+    font-size: 3.73vw;
+    line-height: 8.53vw;
+    color: #333
 }

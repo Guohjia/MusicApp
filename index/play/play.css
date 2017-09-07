@@ -86,7 +86,7 @@
 }
 
 .disc .disc-cover{
-    width:49vw;
+    width:50vw;
     border-radius: 50%;
     animation: rotation 20s infinite linear;
     -webkit-animation: rotation 20s infinite linear;
