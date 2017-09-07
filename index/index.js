@@ -36,7 +36,10 @@ $(function () {
 
         //热歌榜请求
         if (index === 1) {
-            if ($contentlis.eq(index).attr('data-downloaded') == 'yes') { console.log('请求过了'); return }
+            if ($contentlis.eq(index).attr('data-downloaded') == 'yes') { 
+                // console.log('请求过了');
+                 return 
+            }
             $.get('./tab2.json').then(function (result) {
                 let item = result;
                 let $bottomMore = $(`<div class="fulllist">
@@ -72,30 +75,33 @@ $(function () {
 //搜索页面逻辑
 $(function () {
     let timer = null;
-
-    $('.icon-back').on('click', function () {
+    let $output=$('.output')
+    let $iconback=$('.icon-back')
+    let $hotsearch=$('.hot-search')
+    $iconback.on('click', function () {
         $('#search').val('')
-        $('.output').text('')
-        $('.hot-search').addClass('active')
-        $('.icon-back').removeClass('active')
+        $output.text('')
+        $hotsearch.addClass('active')
+        $iconback.removeClass('active')
         $('.searchSong>.songList').empty()  //清空ul
     })
 
     $('.hot-search>.list').on('click','li',function(){
         let id=$(this).attr('data-id')
-        $('.hot-search').removeClass('active')
-        $('.icon-back').addClass('active')
+        $hotsearch.removeClass('active')
+        $iconback.addClass('active')
         sendRequest(+id) //string=>number
     })
 
     $('#search').on('input', function (e) {
-        $('.hot-search').removeClass('active')
-        $('.icon-back').addClass('active')
+        $hotsearch.removeClass('active')
+        $iconback.addClass('active')
+        $('.searchSong>.songList').empty()
         let value = $(e.currentTarget).val().trim()
         if (timer) {
             clearTimeout(timer) //如果300ms内再次输入则清除之前的定时器,重新生成
         }
-        if (value === '') { $('.output').text(''); return }
+        if (value === '') { $output.text(''); return }
         startSearch(value)
     })
 
@@ -104,18 +110,18 @@ $(function () {
         timer = setTimeout(function () {
             search(value).then((result) => {
                 if (result.length !== 0) {
-                    $('.output').html(result.map(item => { return `<h3>${item.name }</he>`}))
+                    $output.html(result.map(item => { return `<h3>${item.name }</he>`}))
                     let h3Nodes=document.querySelectorAll('.output>h3')
-                    document.querySelector('.output').onclick=function(e){   //用原生js方法多次绑定事件
+                    $output[0].onclick=function(e){   //用原生js方法多次绑定事件
                         let $loading = `<img class="contentLoading" src="./images/loading.gif" alt="">`
-                        $('.output').text('')
+                        $output.text('')
                         $('.searchSong').append($loading)
                         let index=[].indexOf.call(h3Nodes,e.target)  //区分多个搜索结果
                         let { id } = result[index]
                         sendRequest(id)
                     }
                 } else {
-                    $('.output').text('没有结果')
+                    $output.text('没有结果')
                 }
                 timer = null;  //开始执行定时器内容,执行结束之后清除定时器,下次输入重新生成
             })

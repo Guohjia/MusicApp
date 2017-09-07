@@ -325,6 +325,9 @@ section.art .copyright{
     line-height: 8.53vw;
     color: #333
 }
+.output{   
+    margin-top: 2vw;
+}
 .output>h3{
     margin-right: 2vw;
     padding: 2vw 0 1.5vw 0;
