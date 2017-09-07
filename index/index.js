@@ -125,7 +125,7 @@ $(function () {
                 }
                 timer = null;  //开始执行定时器内容,执行结束之后清除定时器,下次输入重新生成
             })
-        }, 400)  //如果300ms内再次输入则清除之前的定时器,重新生成
+        }, 400)  //如果400ms内再次输入则清除之前的定时器,重新生成
     }
 
     function search(keyword) {
@@ -198,7 +198,7 @@ $(function () {
             </a>
             </li>`)
             $('.searchSong>.contentLoading').remove()
-            $('.songList').append($li)
+            $('.searchSong>.songList').append($li)
         })
     }
 
