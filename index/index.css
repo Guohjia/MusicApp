@@ -279,6 +279,9 @@ section.art .copyright{
 .searchWrapper #search::placeholder{
     color: #c9c9c9;
 }
+.searchSong>.songList{
+    padding-left: 2vw;
+}
 .input-wrapper span{
     position: absolute;
 }
@@ -290,6 +293,16 @@ section.art .copyright{
 .input-wrapper>.icon-back{
     right: 0;
     padding-right: 2.67vw;
+    display: none;
+}
+.input-wrapper>.icon-back.active{
+    display: block;
+}
+.hot-search{
+    display: none;
+}
+.hot-search.active{
+    display: block;
 }
 .hot-search>span{
     font-size: 3.2vw;
