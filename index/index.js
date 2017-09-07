@@ -82,8 +82,11 @@ $(function () {
     })
 
     $('.hot-search>.list').on('click','li',function(){
-        let value=$(this).text()
-        startSearch(value)
+        let id=$(this).attr('data-id')
+        console.log(typeof id)
+        $('.hot-search').removeClass('active')
+        $('.icon-back').addClass('active')
+        sendRequest(+id) //string=>number
     })
 
     $('#search').on('input', function (e) {
@@ -116,7 +119,7 @@ $(function () {
                 }
                 timer = null;  //开始执行定时器内容,执行结束之后清除定时器,下次输入重新生成
             })
-        }, 500)  //如果300ms内再次输入则清除之前的定时器,重新生成
+        }, 400)  //如果300ms内再次输入则清除之前的定时器,重新生成
     }
 
     function search(keyword) {
