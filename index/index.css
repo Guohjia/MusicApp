@@ -142,7 +142,7 @@ section>h2:first-child{
     letter-spacing: .2vw;
     font-size: 4.5vw;
     color: #333;
-    width: 90vw;
+    width: 85vw;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -155,7 +155,7 @@ section>h2:first-child{
     align-items: center;
 }
 .latestMusic>ul>li>p>.singer,.songList .song-content>p>.singer{
-    margin-left: 1vw;
+    margin-left: 5.2vw;
 }
 .latestMusic>ul>li>h3>span,.songList .song-content>h3>span{
     color:#888;
@@ -169,7 +169,12 @@ section>h2:first-child{
 .latestMusic>.loading{
     text-align: center;
 }
-
+.latestMusic .sq,.song-content .sq{
+    position: absolute;
+    bottom: 0;
+    width: 4.2vw;
+    height: 4vw;
+}
 section.art{
     text-align: center;
     background: transparent url(//s3.music.126.net/m/s/img/recommand_bg_2x.png?d045fa) center 0;
