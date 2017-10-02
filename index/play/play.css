@@ -38,6 +38,7 @@
     background: rgba(0, 0, 0, .5);
     left: 50%;
     top: 50%;
+    -webkit-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
 }
 .disc .icon{
@@ -56,8 +57,10 @@
 }
 
 .play-page .disc-pointer{
+    -webkit-transform:rotate(-20deg);
     transform: rotate(-20deg);
     transition: all .3s linear;
+    -webkit-transform-orgin:8px 0;
     transform-origin: 8px 0;
     width:25vw;
     position: absolute;
@@ -67,6 +70,7 @@
 }
 
 .play-page .disc-pointer.active{
+    -webkit-transform: rotate(0deg);
     transform: rotate(0deg)
 }
 
@@ -76,33 +80,32 @@
 .disc>.light-wrapper>.disc-light{
     width:79vw;
     border-radius: 50%;
-    animation: rotation 20s infinite linear;
-    /* -webkit-animation: none; */
     -webkit-animation: rotation 20s infinite linear;
-    -moz-animation: rotation 20s infinite linear;
+    animation: rotation 20s infinite linear;
+    /* -moz-animation: rotation 20s infinite linear; */
     animation-play-state: paused;
     -webkit-animation-play-state: paused;
-    -moz-animation-play-state: paused;
+    /* -moz-animation-play-state: paused; */
 }
 
 .disc .disc-cover{
     width:50vw;
     border-radius: 50%;
-    animation: rotation 20s infinite linear;
     -webkit-animation: rotation 20s infinite linear;
-    -moz-animation: rotation 20s infinite linear;
+    animation: rotation 20s infinite linear;
+    /* -moz-animation: rotation 20s infinite linear; */
     /* -webkit-animation: none; */
-    animation-play-state: paused;
     -webkit-animation-play-state: paused;
-    -moz-animation-play-state: paused;
+    animation-play-state: paused;
+    /* -moz-animation-play-state: running;  */
 }
 
 .disc.playing .disc-light,
 .disc.playing .disc-cover
 {
-    animation-play-state: running;
     -webkit-animation-play-state: running;
-    -moz-animation-play-state: running;
+    animation-play-state: running;
+    /* -moz-animation-play-state: running; */
 }
 
 .light-wrapper{
@@ -173,8 +176,13 @@
 }
 
 @keyframes rotation{
+    0%{
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg)
+    }
     100%{
-        transform: rotate(360deg)
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg)
     }
 }
 

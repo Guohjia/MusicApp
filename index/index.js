@@ -183,12 +183,11 @@ $(function () {
     function sendRequest(id){
         $.get('./tab2.json').then(function (response) {
             var searchResult = response.filter(function(i){return i.id == id})
-            console.log(searchResult)
             var $li = '<li>'+
             '<div class="song-content"'+
                 '<h3>'+searchResult[0].name+'<span>'+searchResult[0].description+'</span></h3>'+
                 '<p>'+
-                    '<img src="./images/play.png" alt="" style="height:5vw;width:5vw">'+
+                    '<img src="./images/sq.png" alt="" class="sq">'+
                     '<span class="singer">'+searchResult[0].singer+'</span>'+
                 '</p>'+
             '</div>'+
